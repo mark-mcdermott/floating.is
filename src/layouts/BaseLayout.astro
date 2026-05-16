@@ -1,0 +1,45 @@
+---
+import '../styles/global.css';
+import '@fontsource/fraunces/400.css'
+import '@fontsource/dm-mono/500.css'
+import '@fontsource/ibm-plex-mono/500.css'
+import '@fontsource/inter/200.css'
+import '@fontsource/inter/300.css'
+import '@fontsource/inter/400.css'
+import '@fontsource/inter/500.css'
+import SiteHeader from '../components/SiteHeader.astro'
+import Analytics from '@vercel/analytics/astro'
+
+interface Props {
+  title?: string
+  description?: string
+}
+
+const {
+  title = 'floating.is',
+  description = 'An independed software studio.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <script is:inline>
+      // Avoid FOUC: set theme class before paint
+      const stored=localStorage.getItem('theme')
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+      if (stored === 'dark' || (!stored && prefersDark)) {
+        document.documentElement.classList.add('dark')
+      }
+    </script>
+  </head>
+  <body class="min-h-dvh bg-bg test-ink antialiased">
+    <SiteHeader />
+    <slot />
+    <Analytics />
+  </body>
+</html>
