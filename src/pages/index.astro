@@ -3,13 +3,24 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 ---
 
 <BaseLayout>
-  <main class="mx-auto maxax-w-7xl px-6 py-32 md:px-8 md:py-48">
-    <p class="font-sans text-sm tracking-wide text-muted uppercase">floating.is</p>
-    <h1 class="mt-8 font-serif text-6xl leading-[1.05] tracking-tight text-ink md:text-8xl">
-      Quiet software,<br />made slowly.
-    </h1>
-    <p class="mt-10 max-w-xl font-sans text-base leading-relaxed text-muted md:text-lg">
-      An independent studio building calm, considered tools.
-    </p>
+  <main>
+    <section class="mx-auto max-w-7xl px-6 pt-12 md:px-8 md:pt-20">
+      <div class="md:grid md:grid-cols-[260px_1fr] md:items-start md:gap-20">
+
+        <div>
+          <p class="font-serif text-8xl leading-none tracking-tight text-ink">
+            01<span class="text-accent">.</span>
+          </p>
+          <div class="mt-5 w-10 border-t border-ink/20"></div>
+        </div>
+
+        <h1 class="mt-10 font-serif text-5xl leading-[1.08] tracking-tight text-ink md:mt-0 md:text-6xl lg:text-7xl">
+          Software that <em class="italic text-muted">hovers</em> just above the day.
+        </h1>
+
+      </div>
+
+      <div class="mt-20 border-t border-bloack/10 dark:border-white/10 md:mt-28"></div>
+    </section>
   </main>
 </BaseLayout>
