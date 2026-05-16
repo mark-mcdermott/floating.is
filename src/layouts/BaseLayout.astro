@@ -1,12 +1,8 @@
 ---
 import '../styles/global.css';
-import '@fontsource/fraunces/400.css'
-import '@fontsource/dm-mono/500.css'
-import '@fontsource/ibm-plex-mono/500.css'
-import '@fontsource/inter/200.css'
-import '@fontsource/inter/300.css'
-import '@fontsource/inter/400.css'
-import '@fontsource/inter/500.css'
+import '@fontsource/fraunces/300'
+import '@fontsource/inter/400'
+import '@fontsource/dm-mono/400'
 import SiteHeader from '../components/SiteHeader.astro'
 import SiteFooter from '../components/SiteFooter.astro'
 import Analytics from '@vercel/analytics/astro'
@@ -37,8 +33,9 @@ const {
         document.documentElement.classList.add('dark')
       }
     </script>
+    <link rel="stylesheet" href="https://use.typekit.net/ctp2ldn.css">
   </head>
-  <body class="min-h-dvh bg-bg test-ink antialiased">
+  <body class="min-h-dvh bg-bg text-ink antialiased">
     <SiteHeader />
     <slot />
     <SiteFooter />
