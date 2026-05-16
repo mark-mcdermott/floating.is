@@ -1,17 +1,15 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro'
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+  <main class="mx-auto maxax-w-7xl px-6 py-32 md:px-8 md:py-48">
+    <p class="font-sans text-sm tracking-wide text-muted uppercase">floating.is</p>
+    <h1 class="mt-8 font-serif text-6xl leading-[1.05] tracking-tight text-ink md:text-8xl">
+      Quiet software,<br />made slowly.
+    </h1>
+    <p class="mt-10 max-w-xl font-sans text-base leading-relaxed text-muted md:text-lg">
+      An independent studio building calm, considered tools.
+    </p>
+  </main>
+</BaseLayout>
