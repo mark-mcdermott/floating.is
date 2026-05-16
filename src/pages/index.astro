@@ -4,23 +4,119 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 
 <BaseLayout>
   <main>
+
     <section class="mx-auto max-w-7xl px-6 pt-12 md:px-8 md:pt-20">
       <div class="md:grid md:grid-cols-[260px_1fr] md:items-start md:gap-20">
-
         <div>
-          <p class="font-serif text-8xl leading-none tracking-tight text-ink">
-            01<span class="text-accent">.</span>
+          <p class="font-hero-numbers text-8xl leading-none font-normal tracking-tighter text-ink-soft">
+            01<span class="ml-[5px] text-accent text-7xl">.</span>
           </p>
-          <div class="mt-5 w-10 border-t border-ink/20"></div>
+          <div class="mt-5 w-10 border-t-2 border-ink/5"></div>
         </div>
-
-        <h1 class="mt-10 font-serif text-5xl leading-[1.08] tracking-tight text-ink md:mt-0 md:text-6xl lg:text-7xl">
-          Software that <em class="italic text-muted">hovers</em> just above the day.
+        <h1 class="mt-10 font-sans font-normal text-5xl leading-[1.08] tracking-tight text-ink md:mt-0 md:text-6xl lg:text-7xl">
+          Software<br />that <em class="font-hero-italic font-normal text-ink-ghost/70 tracking-[-0.07em]">hovers</em><br /><span class="ml-10">just above</span><br /><span class="ml-20">the day.</span>
         </h1>
-
       </div>
-
-      <div class="mt-20 border-t border-bloack/10 dark:border-white/10 md:mt-28"></div>
+      <div class="mt-20 border-t border-black/10 dark:border-white/10 md:mt-28"></div>
     </section>
+
+    <section class="mx-auto max-w-7xl px-6 pt-8 pb-16 md:px-8 md:pt-8 md:pb-12">
+      <div class="flex items-start gap-4 md:max-w-xl">
+        <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent">
+          <span class="font-sans text-3xl font-medium text-white">1</span>
+        </div>
+        <div class="mt-4 space-y-4">
+          <p class="font-sans text-base leading-relaxed text-ink max-w-[16.35em]">
+            <span class="text-accent font-semibold">floating.is</span> is a one person studio in Austin, Texas.
+          </p>
+          <p class="font-sans text-base leading-relaxed text-ink max-w-[16.35em]">
+            I build quiet software that respects your time and your attention.
+          </p>
+          <p class="font-sans text-base leading-relaxed text-ink">
+            Built slowly. Maintained for the long term.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-[1550px] px-3 pb-16 md:px-8 md:pb-24">
+      <h2 class="text-center font-serif text-3xl text-ink md:text-4xl font-light">Work</h2>
+      <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-5">
+
+        <a 
+          href="/work/mockingboard"
+          class="flex flex-col rounded-xl p-6 mb-4 transition-opacity hover:opacity-70 dark:border-white/10 md:p-8 bg-bg-2 shadow-[0_4px_24px_rgba(0,0,0,0.06)]"
+        >
+          <div class="flex items-start justify-between">
+            <div>
+              <h3 class="font-serif text-xl text-ink md:text-2xl">Mockingboard</h3>
+              <p class="mt-1 font-serif text-sm italic text-muted">quick mockups, clear ideas</p>
+            </div>
+            <span class="mt-1 text-muted md:hidden">→</span>
+          </div>
+          <div class="mt-5 hidden border-t border-black/10 dark:border-white/10 md:block"></div>
+          <p class="mt-6">Capture ideas and turn them<br />into clean, sharable mockups.</p>
+          <div class="mt-4 hidden items-end justify-between md:flex">
+            <ul class="mt-6 hidden space-y-2 md:block">
+              {['Capture ideas', 'Arraynge visually', 'Share instantly'].map((item) => (
+                <li class="font-sans text-sm text-muted">- {item}</li>
+              ))}
+            </ul>
+            <img
+              src="/images/screenshot-mockingboard.png"
+              alt="Mockingboard screenshot"
+              class="w-24 rounded-md opacity-90"
+            />
+          </div>
+          <p class="mt-20 font-semibold text-accent">Learn more →</p>
+        </a>
+
+        <a
+          href="/work/tova"
+          class="flex flex-col rounded-xl p-6 transition-opacity hover:opacity-70 dark:border-white/10 mt-8 md:p-8 bg-bg-2 shadow-[0_4px_24px_rgba(0,0,0,0.06)]"
+        >
+          <div class="flex items-start justify-between">
+            <h3 class="font-serif text-xl text-ink md:text-2xl">Tova</h3>
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-[10px] tracking-widest text-muted">· · PLEKTINE</span>
+              <span class="text-muted md:hidden">→</span>
+            </div>
+          </div>
+          <p class="mt-2 font-serif text-sm italic text-muted">a quiet place to read and write</p>
+          <div class="mt-5 hidden border-t border-black/10 dark:border-white/10 md:block"></div>
+          <p class="my-6">Everything in one place.<br />Easy to find when you need it.</p>
+          <ul class="mt-6 hidden space-y-2 md:block">
+            {['Notes & writing', 'Library & reading', 'Search that understands'].map((item) => (
+              <li class="font-sans text-sm text-muted">- {item}</li>
+            ))}
+          </ul>
+          <p class="mt-20 font-semibold text-accent">Learn more →</p>
+        </a>
+
+
+        <a 
+          href="/work/diamondheart"
+          class="flex flex-col rounded-xl p-6 mb-4 transition-opacity hover:opacity-70 dark:border-white/10 md:p-8 bg-bg-2 shadow-[0_4px_24px_rgba(0,0,0,0.06)]"
+        >
+          <div class="flex items-start justify-between">
+            <div>
+              <h3 class="font-serif text-xl text-ink md:text-2xl">Diamondheart</h3>
+              <p class="mt-1 font-serif text-sm italic text-muted">live well, with intention</p>
+            </div>
+            <span class="mt-1 text-muted md:hidden">→</span>
+          </div>
+          <div class="mt-5 hidden border-t border-black/10 dark:border-white/10 md:block"></div>
+          <p class="my-6">Simple daily practices<br />that keep you grounded. </p>
+          <ul class="mt-4 hidden space-y-2 md:block">
+            {['Track daily habits', 'Meditation timer', 'Mindful reminders', 'Focus on balance'].map((item) => (
+              <li class="font-sans text-sm text-muted">- {item}</li>
+            ))}
+          </ul>
+          <p class="mt-20 font-semibold text-accent">Learn more →</p>
+        </a>
+      </div>
+      <div class="mt-20 border-t border-black/10 dark:border-white/10 md:mt-10"></div>
+    </section>
+
   </main>
 </BaseLayout>
