@@ -8,6 +8,7 @@ import '@fontsource/inter/300.css'
 import '@fontsource/inter/400.css'
 import '@fontsource/inter/500.css'
 import SiteHeader from '../components/SiteHeader.astro'
+import SiteFooter from '../components/SiteFooter.astro'
 import Analytics from '@vercel/analytics/astro'
 
 interface Props {
@@ -40,6 +41,7 @@ const {
   <body class="min-h-dvh bg-bg test-ink antialiased">
     <SiteHeader />
     <slot />
+    <SiteFooter />
     <Analytics />
   </body>
 </html>

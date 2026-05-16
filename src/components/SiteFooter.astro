@@ -1,0 +1,74 @@
+---
+const year = new Date().getFullYear()
+
+const exploreLinks = [
+  { href: '/work', label: 'Work' },
+  { href: '/studio', label: 'Studio' },
+  { href: '/journal', label: 'Journal' },
+]
+---
+
+<footer class="relative mt-24 border-t border-black/5 dark:border-white/10">
+  <div class="mx-auto max-w-7xl px-6 py-12 md:px-8 md:py-16">
+    <div class="grid grid-cols-2 gap-10 md:grid-cols-4">
+
+      <div class="col-span-2 md:col-span-1">
+
+        <a href="/" class="font-sans text-sm font-medium text-ink">floating.is</a>
+        <p class="mt-2 max-2-[160px] font-sans text-xs leading-relaxed text-muted">
+          One person studio making quiet software.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-sans text-[10px] uppercase tracking-widest text-muted">Explore</p>
+        <ul class="mt-4 space-y-2">
+          {exploreLinks.map(({ href, label }) => (
+            <li>
+              <a href={href} class="font-sans text-xs text-ink transition-opacity hover:opacity-60">
+                {label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <p class="font-sans text-[10px] uppercase tracking-widest text-muted">Connect</p>
+        <ul class="mt-4 space-y-2">
+          <li>
+            <a
+              href="mailto:hello@floating.is"
+              class="font-sans text-xs text-ink transition-opacity hover:opacity-60"
+            >
+              hello@floating.is
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="font-sans text-[10px] uppercase tracking-widest text-muted">Austin, Texas</p>
+        <p class="mt-4 font-sans text-xs text-muted">© {year} floating.is</p>
+        <p class="font-sans text-xs text-muted">All rights reserved.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <button
+    id="theme-toggle"
+    aria-label="Toggle dark mode"
+    class="absolute bottom-6 right-6 flex h-8 w-8 items-center justify-center rounded-full border border-black/20 transition-opacity hover:opacity-60 dark:border-white/20 md:bottom-8 md:right-8 hover:cursor-pointer"
+  >
+    <span class="h-1.5 w-1.5 rounded-full bg-ink"></span>
+  </button>
+</footer>
+
+<script>
+  const toggle = document.getElementById('theme-toggle')
+  toggle?.addEventListener('click', () => {
+    const isDark = document.documentElement.classList.toggle('dark')
+    localStorage.setItem('theme', isDark ? 'dark' : 'light')
+  })
+</script>
