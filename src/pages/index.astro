@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
+import { MapPin, Calendar, Clock, Anchor } from 'lucide-astro'
 ---
 
 <BaseLayout>
@@ -130,6 +131,37 @@ import BaseLayout from '../layouts/BaseLayout.astro'
             And I ship when it's ready, not when it's trendy.
           </p>
           <p class="mt-4 font-serif font-light text-xl text-ink md:text-2xl"><em>Less, but better</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl grid grid-cols-4 px-1">
+      <div class="flex gap-4 border-r border-black/10 pl-15">
+        <MapPin strokeWidth={1.25} class="h-6 w-6" />
+        <div class="flex flex-col items-start">
+          <p class="font-serif font-light leading-5 text-xl text-ink md:text-[1.1rem]">Austin, Texas</p>
+          <p class="font-sans text-xs leading-relaxed text-ink md:max-w-[7rem]">Based and building in Austin.</p>
+        </div>
+      </div>
+      <div class="flex gap-4 border-r border-black/10 px-6">
+        <Calendar strokeWidth={1.25} class="h-6 w-6" />
+        <div class="flex flex-col items-start">
+          <p class="font-serif font-light leading-5 text-xl text-ink md:text-[1.1rem]">Founded 2026</p>
+          <p class="font-sans text-xs leading-relaxed text-ink md:max-w-[10rem]">Independent since day one. Built on curiosity.</p>
+        </div>
+      </div>
+      <div class="flex gap-4 border-r border-black/10 px-6">
+        <Clock strokeWidth={1.25} class="h-6 w-6" />
+        <div class="flex flex-col items-start">
+          <p class="font-serif font-light leading-5 text-xl text-ink md:text-[1.1rem]">Built slowly</p>
+          <p class="font-sans text-xs leading-relaxed text-ink md:max-w-[9rem]">I take the time to do things thoughtfully.</p>
+        </div>
+      </div>
+      <div class="flex gap-4 pl-6">
+        <Anchor strokeWidth={1.25} class="h-6 w-6" />
+        <div class="flex flex-col items-start">
+          <p class="font-serif font-light leading-5 text-xl text-ink md:text-[1.1rem]">Maintained long term</p>
+          <p class="font-sans text-xs leading-relaxed text-ink md:max-w-[9rem]">I build to last and support everything I make.</p>
         </div>
       </div>
     </section>
