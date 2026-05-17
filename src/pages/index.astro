@@ -9,16 +9,16 @@ import { MapPin, Calendar, Clock, Anchor } from 'lucide-astro'
     <section class="mx-auto max-w-7xl px-6 pt-12 md:px-8 md:pt-20">
       <div class="md:grid md:grid-cols-[260px_1fr] md:items-start md:gap-20">
         <div>
-          <p class="font-hero-numbers text-8xl leading-none font-normal tracking-tighter text-ink-soft">
+          <p class="font-hero-numbers text-7xl md:text-8xl leading-none font-normal tracking-tighter text-ink-soft">
             01<span class="ml-[5px] text-accent text-7xl">.</span>
           </p>
           <div class="mt-5 w-10 border-t-2 border-ink/5"></div>
         </div>
-        <h1 class="mt-10 font-sans font-normal text-5xl leading-[1.08] tracking-tight text-ink md:mt-0 md:text-6xl lg:text-7xl">
-          Software<br />that <em class="font-hero-italic font-normal text-ink-ghost/70 tracking-[-0.07em]">hovers</em><br /><span class="ml-10">just above</span><br /><span class="ml-20">the day.</span>
+        <h1 class="mt-10 font-sans font-normal text-7xl md:text-5xl leading-[1.08] tracking-tight text-ink md:mt-0 md:text-6xl lg:text-7xl">
+          Software <br class="hidden md:block" />that<br class="md:hidden" /> <em class="font-hero-italic font-normal text-ink-ghost/70 tracking-[-0.07em]">hovers</em><br class="hidden md:block" /> <span class="md:ml-10">just above </span><br /><span class="md:ml-20">the day.</span>
         </h1>
       </div>
-      <div class="mt-20 border-t border-black/10 dark:border-white/10 md:mt-28"></div>
+      <div class="mt-10 border-t border-black/10 dark:border-white/10 md:mt-28"></div>
     </section>
 
     <section class="mx-auto max-w-7xl px-6 pt-8 pb-16 md:px-8 md:pt-8 md:pb-12">
@@ -27,73 +27,80 @@ import { MapPin, Calendar, Clock, Anchor } from 'lucide-astro'
           <span class="font-sans text-3xl font-medium text-white">1</span>
         </div>
         <div class="mt-4 space-y-4">
-          <p class="font-sans text-base leading-relaxed text-ink max-w-[16.35em]">
+          <p class="font-sans text-lg md:text-base leading-relaxed text-ink max-w-[16.35em]">
             <span class="text-accent font-semibold">floating.is</span> is a one person studio in Austin, Texas.
           </p>
-          <p class="font-sans text-base leading-relaxed text-ink max-w-[16.35em]">
+          <p class="font-sans text-lg md:text-base leading-relaxed text-ink max-w-[16.35em]">
             I build quiet software that respects your time and your attention.
           </p>
-          <p class="font-sans text-base leading-relaxed text-ink">
+          <p class="font-sans text-lg md:text-base leading-relaxed text-ink">
             Built slowly. Maintained for the long term.
           </p>
         </div>
       </div>
     </section>
 
-    <section class="mx-auto max-w-[1550px] px-3 pb-16 md:px-8 md:pb-24">
-      <h2 class="text-center font-serif text-3xl text-ink md:text-4xl font-light">Work</h2>
-      <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-5">
+    <section class="mx-auto max-w-[1550px] px-3 pb-16 md:px-8 md:pb-12">
+      <h2 class="pl-1 md:pl-0 md:text-center font-serif text-4xl text-ink font-light">Work</h2>
+      <!-- <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-5"> -->
+       <div class="mt-6 mx-auto max-w-lg">
 
         <a 
-          href="/work/mockingboard"
-          class="flex flex-col rounded-xl p-6 mb-4 transition-opacity hover:opacity-70 dark:border-white/10 md:p-8 bg-bg-2 shadow-[0_4px_24px_rgba(0,0,0,0.06)]"
+          href="https://mockingboard.design"
+          class="flex flex-col rounded-xl p-6 md:mb-4 transition-opacity hover:opacity-70 dark:border-white/10 md:p-8 bg-bg-2 shadow-[0_4px_24px_rgba(0,0,0,0.06)]"
         >
           <div class="flex items-start justify-between">
             <div>
-              <h3 class="font-serif text-xl text-ink md:text-2xl">Mockingboard</h3>
-              <p class="mt-1 font-serif text-sm italic text-muted">quick mockups, clear ideas</p>
+              <h3 class="font-serif font-light md:font-normal text-ink text-4xl md:text-2xl">Mockingboard</h3>
+              <p class="mt-2 font-serif italic text-lg md:text-sm text-ink-soft md:text-muted">quick mockups, clear ideas</p>
             </div>
-            <span class="mt-1 text-muted md:hidden">→</span>
+            <span class="pt-11 text-3xl text-ink font-light md:hidden">→</span>
           </div>
-          <div class="mt-5 hidden border-t border-black/10 dark:border-white/10 md:block"></div>
-          <p class="mt-6">Capture ideas and turn them<br />into clean, sharable mockups.</p>
-          <div class="mt-4 hidden items-end justify-between md:flex">
+          <div class="hidden md:block">
+            <div class="mt-5 border-t border-black/10 dark:border-white/10"></div>
+            <p class="mt-6">Capture ideas and turn them<br />into clean, sharable mockups.</p>
+            <div class="mt-4 hidden items-end justify-between md:flex">
+              <ul class="mt-6 hidden space-y-2 md:block">
+                {['Capture ideas', 'Arraynge visually', 'Share instantly'].map((item) => (
+                  <li class="font-sans text-sm text-muted">- {item}</li>
+                ))}
+              </ul>
+              <img
+                src="/images/screenshot-mockingboard.png"
+                alt="Mockingboard screenshot"
+                class="w-24 rounded-md opacity-90"
+              />
+            </div>
+            <p class="mt-20 font-semibold text-accent">Learn more →</p>
+          </div>
+        </a>
+
+        <!--
+        <a
+          href="/work/tova"
+          class="flex flex-col rounded-xl p-6 transition-opacity hover:opacity-70 dark:border-white/10 md:mt-8 md:p-8 bg-bg-2 shadow-[0_4px_24px_rgba(0,0,0,0.06)]"
+        >
+          <div class="flex items-start justify-between">
+            <div>
+              <h3 class="font-serif font-light md:font-normal text-ink text-4xl md:text-2xl">Tova</h3>
+              <p class="mt-2 font-serif italic text-lg md:text-sm text-ink-soft md:text-muted">a quiet place to read and write</p>
+            </div>
+            <div class="flex align-start justify-start">
+              <span class="flex mt-5 mr-13 md:mt-0 md:mr-0 font-mono text-[13px] font-semibold tracking-widest text-muted leading-0"><span class="text-[20px] md:text-base">·</span> · PLEKTINE</span>
+              <span class="pt-11 text-3xl text-ink font-light md:hidden">→</span>
+            </div>
+          </div>
+          <div class="hidden md:block">
+            <div class="mt-5 hidden border-t border-black/10 dark:border-white/10 md:block"></div>
+            <p class="my-6">Everything in one place.<br />Easy to find when you need it.</p>
             <ul class="mt-6 hidden space-y-2 md:block">
-              {['Capture ideas', 'Arraynge visually', 'Share instantly'].map((item) => (
+              {['Notes & writing', 'Library & reading', 'Search that understands'].map((item) => (
                 <li class="font-sans text-sm text-muted">- {item}</li>
               ))}
             </ul>
-            <img
-              src="/images/screenshot-mockingboard.png"
-              alt="Mockingboard screenshot"
-              class="w-24 rounded-md opacity-90"
-            />
+            <p class="mt-20 font-semibold text-accent">Learn more →</p>
           </div>
-          <p class="mt-20 font-semibold text-accent">Learn more →</p>
         </a>
-
-        <a
-          href="/work/tova"
-          class="flex flex-col rounded-xl p-6 transition-opacity hover:opacity-70 dark:border-white/10 mt-8 md:p-8 bg-bg-2 shadow-[0_4px_24px_rgba(0,0,0,0.06)]"
-        >
-          <div class="flex items-start justify-between">
-            <h3 class="font-serif text-xl text-ink md:text-2xl">Tova</h3>
-            <div class="flex items-center gap-3">
-              <span class="font-mono text-[10px] tracking-widest text-muted">· · PLEKTINE</span>
-              <span class="text-muted md:hidden">→</span>
-            </div>
-          </div>
-          <p class="mt-2 font-serif text-sm italic text-muted">a quiet place to read and write</p>
-          <div class="mt-5 hidden border-t border-black/10 dark:border-white/10 md:block"></div>
-          <p class="my-6">Everything in one place.<br />Easy to find when you need it.</p>
-          <ul class="mt-6 hidden space-y-2 md:block">
-            {['Notes & writing', 'Library & reading', 'Search that understands'].map((item) => (
-              <li class="font-sans text-sm text-muted">- {item}</li>
-            ))}
-          </ul>
-          <p class="mt-20 font-semibold text-accent">Learn more →</p>
-        </a>
-
 
         <a 
           href="/work/diamondheart"
@@ -101,30 +108,34 @@ import { MapPin, Calendar, Clock, Anchor } from 'lucide-astro'
         >
           <div class="flex items-start justify-between">
             <div>
-              <h3 class="font-serif text-xl text-ink md:text-2xl">Diamondheart</h3>
-              <p class="mt-1 font-serif text-sm italic text-muted">live well, with intention</p>
+              <h3 class="font-serif font-light md:font-normal text-ink text-4xl md:text-2xl">Diamondheart</h3>
+              <p class="mt-2 font-serif italic text-lg md:text-sm text-ink-soft md:text-muted">live well, with intention</p>
             </div>
-            <span class="mt-1 text-muted md:hidden">→</span>
+            <span class="pt-11 text-3xl text-ink font-light md:hidden">→</span>
           </div>
-          <div class="mt-5 hidden border-t border-black/10 dark:border-white/10 md:block"></div>
-          <p class="my-6">Simple daily practices<br />that keep you grounded. </p>
-          <ul class="mt-4 hidden space-y-2 md:block">
-            {['Track daily habits', 'Meditation timer', 'Mindful reminders', 'Focus on balance'].map((item) => (
-              <li class="font-sans text-sm text-muted">- {item}</li>
-            ))}
-          </ul>
-          <p class="mt-20 font-semibold text-accent">Learn more →</p>
+          <div class="hidden md:block">
+            <div class="mt-5 hidden border-t border-black/10 dark:border-white/10 md:block"></div>
+            <p class="my-6">Simple daily practices<br />that keep you grounded. </p>
+            <ul class="mt-4 hidden space-y-2 md:block">
+              {['Track daily habits', 'Meditation timer', 'Mindful reminders', 'Focus on balance'].map((item) => (
+                <li class="font-sans text-sm text-muted">- {item}</li>
+              ))}
+            </ul>
+            <p class="mt-20 font-semibold text-accent">Learn more →</p>
+          </div>
         </a>
+         -->
+
       </div>
     </section>
 
-    <section class="mx-auto max-w-7xl px-6 pt-8 pb-16 md:px-8 md:pt-8 md:pb-12">
+    <section class="mx-auto max-w-7xl px-6 pb-16 md:px-8 md:pb-12">
       <div class="flex items-start gap-4">
         <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent">
           <span class="font-sans text-3xl font-medium text-white">2</span>
         </div>
         <div class="flex flex-col">
-          <div class="mt-20 border-t w-125 border-black/10 dark:border-white/10 md:mt-4"></div>
+          <div class="hidden md:block mt-20 border-t w-125 border-black/10 dark:border-white/10 md:mt-4"></div>
           <p class="mt-4 font-serif text-3xl text-ink md:text-4xl font-light">I believe software should feel light,<br />useful, and unobtrusive.</p>
           <p class="mt-4 font-sans text-base leading-relaxed text-ink">
             I care about the details most people don't notice.<br />
@@ -135,33 +146,33 @@ import { MapPin, Calendar, Clock, Anchor } from 'lucide-astro'
       </div>
     </section>
 
-    <section class="mx-auto max-w-7xl grid grid-cols-4 px-1">
-      <div class="flex gap-4 border-r border-black/10 pl-15">
-        <MapPin strokeWidth={1.25} class="h-6 w-6" />
+    <section class="mx-auto max-w-xl md:max-w-7xl grid grid-cols-1 md:grid-cols-4 px-1">
+      <div class="flex gap-8 md:gap-4 border-b md:border-b-0 md:border-r border-black/10 py-4 md:py-0 px-6 md:pl-15">
+        <MapPin strokeWidth={1.25} class="h-7 w-7 md:h-6 md:w-6" />
         <div class="flex flex-col items-start">
-          <p class="font-serif font-light leading-5 text-xl text-ink md:text-[1.1rem]">Austin, Texas</p>
-          <p class="font-sans text-xs leading-relaxed text-ink md:max-w-[7rem]">Based and building in Austin.</p>
+          <p class="font-serif font-light leading-5 text-ink text-[1.4rem] md:text-[1.1rem]">Austin, Texas</p>
+          <p class="mt-1 md:mt-0 font-sans text-sm md:text-xs leading-relaxed text-ink md:max-w-[7rem]">Based and building in Austin.</p>
         </div>
       </div>
-      <div class="flex gap-4 border-r border-black/10 px-6">
-        <Calendar strokeWidth={1.25} class="h-6 w-6" />
+      <div class="flex gap-8 md:gap-4 border-b md:border-b-0 md:border-r border-black/10 pt-5 pb-4 md:py-0 px-6">
+        <Calendar strokeWidth={1.25} class="h-7 w-7 md:h-6 md:w-6" />
         <div class="flex flex-col items-start">
-          <p class="font-serif font-light leading-5 text-xl text-ink md:text-[1.1rem]">Founded 2026</p>
-          <p class="font-sans text-xs leading-relaxed text-ink md:max-w-[10rem]">Independent since day one. Built on curiosity.</p>
+          <p class="font-serif font-light leading-5 text-ink text-[1.4rem] md:text-[1.1rem]">Founded 2026</p>
+          <p class="mt-1 md:mt-0 font-sans text-sm md:text-xs leading-relaxed text-ink md:max-w-[10rem]">Independent since day one. Built on curiosity.</p>
         </div>
       </div>
-      <div class="flex gap-4 border-r border-black/10 px-6">
-        <Clock strokeWidth={1.25} class="h-6 w-6" />
+      <div class="flex gap-8 md:gap-4 border-b md:border-b-0 md:border-r border-black/10 pt-5 pb-4 md:py-0 px-6">
+        <Clock strokeWidth={1.25} class="h-7 w-7 md:h-6 md:w-6" />
         <div class="flex flex-col items-start">
-          <p class="font-serif font-light leading-5 text-xl text-ink md:text-[1.1rem]">Built slowly</p>
-          <p class="font-sans text-xs leading-relaxed text-ink md:max-w-[9rem]">I take the time to do things thoughtfully.</p>
+          <p class="font-serif font-light leading-5 text-ink text-[1.4rem] md:text-[1.1rem]">Built slowly</p>
+          <p class="mt-1 md:mt-0 font-sans text-sm md:text-xs leading-relaxed text-ink md:max-w-[9rem]">I take the time to do things thoughtfully.</p>
         </div>
       </div>
-      <div class="flex gap-4 pl-6">
-        <Anchor strokeWidth={1.25} class="h-6 w-6" />
+      <div class="flex gap-8 md:gap-4 pt-5 pb-4 md:py-0 px-6">
+        <Anchor strokeWidth={1.25} class="h-7 w-7 md:h-6 md:w-6" />
         <div class="flex flex-col items-start">
-          <p class="font-serif font-light leading-5 text-xl text-ink md:text-[1.1rem]">Maintained long term</p>
-          <p class="font-sans text-xs leading-relaxed text-ink md:max-w-[9rem]">I build to last and support everything I make.</p>
+          <p class="font-serif font-light leading-5 text-ink text-[1.4rem] md:text-[1.1rem]">Maintained long term</p>
+          <p class="mt-1 md:mt-0 font-sans text-sm md:text-xs leading-relaxed text-ink md:max-w-[9rem]">I build to last and support everything I make.</p>
         </div>
       </div>
     </section>
